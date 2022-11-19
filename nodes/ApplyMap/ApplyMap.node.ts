@@ -22,7 +22,7 @@ export class ApplyMap implements INodeType {
 		description: 'ApplyMap',
 		defaults: {
 			name: 'ApplyMap',
-			color: '#733bde',
+			color: '#3ac13a',
 		},
 		// eslint-disable-next-line n8n-nodes-base/node-class-description-inputs-wrong-regular-node
 		inputs: ['main','main'],
