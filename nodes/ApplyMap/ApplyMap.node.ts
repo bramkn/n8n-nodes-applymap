@@ -97,7 +97,7 @@ export class ApplyMap implements INodeType {
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const items:INodeExecutionData[] = this.getInputData(0);
-		let mappingTable:INodeExecutionData[] = this.getInputData(1);
+		const mappingTable:INodeExecutionData[] = this.getInputData(1);
 
 		const returnData: INodeExecutionData[] = [];
 
