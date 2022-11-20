@@ -16,7 +16,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 You can map data and also provide a default value for when there was no value found in the mapping table.
 The first input is the data going through your n8n workflow. 
 The second input is the mapping table.
-This table consists of a 3 fields:
+This table consists of 3 fields:
 * mapName
 * input
 * output
