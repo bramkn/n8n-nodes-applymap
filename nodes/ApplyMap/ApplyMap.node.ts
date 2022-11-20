@@ -111,7 +111,6 @@ export class ApplyMap implements INodeType {
 		if(mappingTables){
 
 			for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
-
 				item = items[itemIndex];
 
 				for(const map of fieldsToMap){
@@ -128,12 +127,9 @@ export class ApplyMap implements INodeType {
 								set(item.json, map.field, newValue);
 							}
 
-							//item.json[`${map.field}`] = mappingTables[`${map.mapName}`].find(x => '' + x.input === '' + item.json[`${map.field}`])?.output || map.defaultValue;
 						}
-
 					}
 				}
-
 				// Copy the whole JSON data as data on any level can be renamed
 				newItem = {
 					json: JSON.parse(JSON.stringify(item.json)),
