@@ -28,7 +28,7 @@ The input is the input value so for example an Id, to be mapped.
 
 The output is the output value that has to replace the input value when it is found.
 
-Before mapping matches are made all values are converted to strings to make sure there is an easy match to be made.
+Each map is made by converting to string and then matching the values. This should make it easier to apply the maps in most cases. If there are any troubles with this please open an issue in github.
 
 ![mappingTable](https://github.com/bramkn/n8n-nodes-applymap/blob/master/images/mappingTable.png)
 
