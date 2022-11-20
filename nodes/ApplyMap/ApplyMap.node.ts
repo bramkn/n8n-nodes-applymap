@@ -109,12 +109,11 @@ export class ApplyMap implements INodeType {
 		const mappingTables = _.mapValues(_.groupBy(mappingTable.map((x)=>(x.json)), 'mapName'),clist => clist.map(mappingTable => _.omit(mappingTable, 'mapName')));
 
 		if(mappingTables){
-			console.log(mappingTables);
 
 			for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 
 				item = items[itemIndex];
-				console.log(item);
+
 				for(const map of fieldsToMap){
 					if(item.json[`${map.field}`]){
 						if(mappingTables[`${map.mapName}`]){
@@ -126,7 +125,7 @@ export class ApplyMap implements INodeType {
 						}
 					}
 				}
-				console.log(item);
+
 				// Copy the whole JSON data as data on any level can be renamed
 				newItem = {
 					json: JSON.parse(JSON.stringify(item.json)),
