@@ -1,4 +1,4 @@
-# n8n-nodes-_node-name_
+# n8n-nodes-applymap
 
 This is an n8n community node. It lets you easily map data. For example an Id to a string value.
 Normally this would be done by using a merge or function/code node. This community node makes it a lot simpler.
