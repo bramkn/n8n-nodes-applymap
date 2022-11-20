@@ -115,14 +115,22 @@ export class ApplyMap implements INodeType {
 				item = items[itemIndex];
 
 				for(const map of fieldsToMap){
-					if(item.json[`${map.field}`]){
+					if(get(item.json, map.field as string)){
 						if(mappingTables[`${map.mapName}`]){
-							item.json[`${map.field}`] = mappingTables[`${map.mapName}`].find(x => '' + x.input === '' + item.json[`${map.field}`])?.output || map.defaultValue;
+							const currentValue = get(item.json, map.field as string);
+							const newValue = mappingTables[`${map.mapName}`].find(x => '' + x.input === '' + currentValue)?.output || map.defaultValue;
+
+							if(map.renameBool && map.renameValue !== ''){
+								set(item.json, map.renameValue, newValue);
+								unset(item.json, map.field as string);
+							}
+							else{
+								set(item.json, map.field, newValue);
+							}
+
+							//item.json[`${map.field}`] = mappingTables[`${map.mapName}`].find(x => '' + x.input === '' + item.json[`${map.field}`])?.output || map.defaultValue;
 						}
-						if(map.renameBool && item.json[`${map.renameValue}`] !== ''){
-							item.json[`${map.renameValue}`] = item.json[`${map.field}`];
-							delete item.json[`${map.field}`];
-						}
+
 					}
 				}
 

@@ -3,6 +3,8 @@
 This is an n8n community node. It lets you easily map data. For example an Id to a string value.
 Normally this would be done by using a merge or function/code node. This community node makes it a lot simpler.
 
+If you find any issues with the node please open an issue on Github.
+
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
 ## Installation
@@ -26,9 +28,16 @@ The input is the input value so for example an Id, to be mapped.
 
 The output is the output value that has to replace the input value when it is found.
 
+![mappingTable](https://github.com/bramkn/ExactOnline/blob/master/images/mappingTable.png)
 
+Keep in mind that this mapping table needs to be formatted exactly like this for it to work.
 
+You can configure the node to do what you need it to do. An example is provided below.
 
+![example](https://github.com/bramkn/ExactOnline/blob/master/images/exampleConfig.png)
+
+Keep in mind that you do not use expressions for setting these values unless you have a specific reason to do so.
+Also keep in mind to use the correct Capitalization. 
 
 ## Compatibility
 
