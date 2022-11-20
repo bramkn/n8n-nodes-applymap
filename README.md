@@ -28,6 +28,8 @@ The input is the input value so for example an Id, to be mapped.
 
 The output is the output value that has to replace the input value when it is found.
 
+Before mapping matches are made all values are converted to strings to make sure there is an easy match to be made.
+
 ![mappingTable](https://github.com/bramkn/n8n-nodes-applymap/blob/master/images/mappingTable.png)
 
 Keep in mind that this mapping table needs to be formatted exactly like this for it to work.
